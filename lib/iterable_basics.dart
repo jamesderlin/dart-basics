@@ -116,7 +116,7 @@ extension IterableBasics<E> on Iterable<E> {
   /// ```dart
   /// ['a', 'aaa', 'aa'].maxBy((e) => e.length).value; // 'aaa'
   /// ```
-  E? maxBy(Comparable Function(E) sortKey) =>
+  E? maxBy(Comparable<dynamic> Function(E) sortKey) =>
       this.max((a, b) => sortKey(a).compareTo(sortKey(b)));
 
   /// Returns the element of [this] with the least value for [sortKey], or
@@ -126,7 +126,7 @@ extension IterableBasics<E> on Iterable<E> {
   /// ```dart
   /// ['a', 'aaa', 'aa'].minBy((e) => e.length).value; // 'a'
   /// ```
-  E? minBy(Comparable Function(E) sortKey) =>
+  E? minBy(Comparable<dynamic> Function(E) sortKey) =>
       this.min((a, b) => sortKey(a).compareTo(sortKey(b)));
 
   /// Returns the sum of all the values in this iterable, as defined by

@@ -1,11 +1,10 @@
 include: package:pedantic/analysis_options.1.8.0.yaml
 
 analyzer:
-  enable-experiment:
-    - non-nullable
-  strong-mode:
-    implicit-casts: true
-    implicit-dynamic: true
+  language:
+    strict-casts: true
+    strict-inference: true
+    strict-raw-types: true
 
 linter:
   rules:
